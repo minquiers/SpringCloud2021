@@ -1,0 +1,22 @@
+server:
+  port: 8081
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: service
+  zipkin:
+    base-url: http://10.0.0.10:9412/
+  sleuth:
+    sampler:
+      probability: 1
+logging:
+  level:
+    org.springframework.cloud.openfeign: debug
+    org.springframework.cloud.sleuth: debug
+
+
