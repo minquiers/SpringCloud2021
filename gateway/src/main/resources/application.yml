@@ -1,0 +1,14 @@
+server:
+  port: 8086
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: hello
+          uri: http://localhost:8085/
+          predicates:
+            - Path=/api/**
+          filters:
+            - RewritePath=/api(?<segment>/?.*), $\{segment}
+  application:
+    name: gateway
