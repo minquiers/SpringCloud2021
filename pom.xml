@@ -22,6 +22,8 @@
         <module>hystrix</module>
         <module>feign</module>
         <module>gateway</module>
+        <module>custom-start</module>
+        <module>custom-start-test</module>
     </modules>
     <description>SpringCloud2021Eureka</description>
     <properties>
